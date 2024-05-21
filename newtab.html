@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <body>
+    <title>Powitanie Firefox</title>
+    <h1>Witaj w Firefox!</h1>
+    <form id="qform" action="https://baresearch.org/">
+      <input type="search" placeholder="wyszukiwanie" name="q"></input>
+    </form>
+  </body>
+  <script>
+    qform = document.querySelector("#qform");
+    searchUrls = ["https://baresearch.org/",
+		  "https://duckduckgo.com/",
+		  "https://search.brave.com/search",
+		 ];
+    qform.action = searchUrls[Math.floor(Math.random() * searchUrls.length)];
+  </script>
+  <style>
+    * {
+	font-family: "Titillium Web";
+	font-weight: 200;
+	font-style: normal;
+	text-align: center;
+    }
+    html {
+	height: 100%;
+	width: 100%;
+	background-image: URL("./fox.jpg");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+    }
+    h1 {
+	font-size: 5vw;
+    }
+    input {
+	width: 30vw;
+	height: 2vw;
+	font-size: 1vw;
+    }
+  </style>
+<html>
